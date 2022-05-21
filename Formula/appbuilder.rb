@@ -9,7 +9,7 @@ class Appbuilder < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-darwin-arm64.zip"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-darwin-arm64.tar.gz"
       sha256 "8230da4674f7c7d24095359ff9d8690eec5da03c7765609fb6e0be87ccb9b1c3"
 
       def install
@@ -17,7 +17,7 @@ class Appbuilder < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-darwin-amd64.zip"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-darwin-amd64.tar.gz"
       sha256 "d3b9cc5bc32aba8af07a28fd0ee60f98e15fb2fd93aee98813341ad504672046"
 
       def install
@@ -28,7 +28,7 @@ class Appbuilder < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-arm6.zip"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-arm6.tar.gz"
       sha256 "9a8e7743233a79eff81c33fb4d1a14ab430fa9dfadcd768142260f6fe23e4e82"
 
       def install
@@ -36,7 +36,7 @@ class Appbuilder < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-arm64.zip"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-arm64.tar.gz"
       sha256 "aa6cff6a250c079c172469003207c45a604cbc0b69e961f537df9471c45df9f1"
 
       def install
@@ -44,7 +44,7 @@ class Appbuilder < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-amd64.zip"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.0.3/appbuilder-0.0.3-linux-amd64.tar.gz"
       sha256 "d46094b80d663b1d167f2f3d230ef696ca38b110bc93db1c41a21d7a61af22ba"
 
       def install
