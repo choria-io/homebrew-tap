@@ -5,20 +5,20 @@
 class Appbuilder < Formula
   desc "Choria Application Builder"
   homepage "https://github.com/choria-io/appbuilder"
-  version "0.3.0"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.3.0/appbuilder-0.3.0-darwin-arm64.tar.gz"
-      sha256 "af1b526a695110b6b74e655b861e2e044627d1de74d46d32727088372ef7e452"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.4.0/appbuilder-0.4.0-darwin-arm64.tar.gz"
+      sha256 "d9f27f7c6a24830288610ccd3a037b2f08fc1b40845361f812df5c3488ee5233"
 
       def install
         bin.install "appbuilder"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.3.0/appbuilder-0.3.0-darwin-amd64.tar.gz"
-      sha256 "95427492b9951fe624896c55bc8950e9fbe3e62e838a1bf2eef5f4b2855c9b0e"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.4.0/appbuilder-0.4.0-darwin-amd64.tar.gz"
+      sha256 "dbe1201935ed3b7ae46be1e0ca17afd160925b02a7d47f974894c9eb81185987"
 
       def install
         bin.install "appbuilder"
@@ -28,24 +28,24 @@ class Appbuilder < Formula
 
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.3.0/appbuilder-0.3.0-linux-arm6.tar.gz"
-      sha256 "5958fdfe0e5d090ccb07da7ed12532f85f027bec086d01ec478de16f8cc8715b"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.4.0/appbuilder-0.4.0-linux-arm6.tar.gz"
+      sha256 "28c78f46ed215242ec574724714cb502806d633c76d464d09a87c6f144014c70"
 
       def install
         bin.install "appbuilder"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.3.0/appbuilder-0.3.0-linux-arm64.tar.gz"
-      sha256 "653aabf6f449ec47dbdc5671c097e74bdfde1c138951e1413f1a90255f256530"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.4.0/appbuilder-0.4.0-linux-arm64.tar.gz"
+      sha256 "2b7ed8538ddf476038bea8a953a27aad56811ef7b9d583061676ae138c500789"
 
       def install
         bin.install "appbuilder"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.3.0/appbuilder-0.3.0-linux-amd64.tar.gz"
-      sha256 "a17131d477083c9952dec6b8aef8ff6b9d88f5a683c2da2b8700b50dc43a1ba5"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.4.0/appbuilder-0.4.0-linux-amd64.tar.gz"
+      sha256 "ae2b54c7d07eb8c83d8afce8dd3baf6a33384b85e0b014b16df5c6352b0ab806"
 
       def install
         bin.install "appbuilder"
