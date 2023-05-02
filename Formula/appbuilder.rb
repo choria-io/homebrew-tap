@@ -10,7 +10,7 @@ class Appbuilder < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.6.6/appbuilder-0.6.6-darwin-arm64.tar.gz"
-      sha256 "030c0a7de1bd9da890cb3804c2dd3efbdf91ea91ac3043537d321daad921af65"
+      sha256 "7ed98e7ff93002cca0799f7da1c186ac44c7649ab903d81cf8ca7a8dbc36a74f"
 
       def install
         bin.install "appbuilder"
@@ -19,7 +19,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.6.6/appbuilder-0.6.6-darwin-amd64.tar.gz"
-      sha256 "6d53d87ad7907867173bc38bb2f24cf1c9440401ab92f14e04e9a4424e406b6f"
+      sha256 "5d6ceb6a0a31817927fbe68c8d06cafa0f0a67b09c74b6c89db0d06fa0b3b7a5"
 
       def install
         bin.install "appbuilder"
@@ -31,7 +31,7 @@ class Appbuilder < Formula
   on_linux do
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.6.6/appbuilder-0.6.6-linux-arm6.tar.gz"
-      sha256 "b0747016ca970f11fcecfc2f870efb1e67018291b7d4d251a7de585ea69bac77"
+      sha256 "3de0d99cff3aaa086d7901b20dba0c528ac6f0e2904b97e3dad0945340be466a"
 
       def install
         bin.install "appbuilder"
@@ -40,7 +40,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.6.6/appbuilder-0.6.6-linux-arm64.tar.gz"
-      sha256 "a7a0b315239de698aa8b7b76058e66537cea608ce7ea83f22f57491fc004aa4f"
+      sha256 "dbbd13a26d3f2eaedc40d7a378067ac4e54f9229719a38024943ac43f526bc5e"
 
       def install
         bin.install "appbuilder"
@@ -49,7 +49,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.6.6/appbuilder-0.6.6-linux-amd64.tar.gz"
-      sha256 "a581d048402f503e60763606d7caa9218025d7c8a52927b24a750a62efe5285b"
+      sha256 "969425c01239a95ce86ad0efd17eabc02ba3e98a77291412a0c1c71144688fed"
 
       def install
         bin.install "appbuilder"
