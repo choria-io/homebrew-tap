@@ -5,20 +5,20 @@
 class Tinyhiera < Formula
   desc "Choria Tiny Hiera CLI"
   homepage "https://github.com/choria-io/tinyhiera"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    on_intel do
-      url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.3/tinyhiera-0.0.3-darwin-amd64.tar.gz"
-      sha256 "835f62a25c36a0a9ab42c1dfa678c8cd13fd8d4d47d0b93e14ce8658ca67831f"
+    if Hardware::CPU.intel?
+      url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.4/tinyhiera-0.0.4-darwin-amd64.tar.gz"
+      sha256 "ad76ca8f879c1cfc3135d906c238779a07df5b73f5f148a08a8687a7ea903e44"
 
       def install
         bin.install "tinyhiera"
       end
     end
-    on_arm do
-      url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.3/tinyhiera-0.0.3-darwin-arm64.tar.gz"
-      sha256 "c1c64dc32a0e0171e7e3e198a34d1816b6af4d1a93dd2876329588e33d04f28e"
+    if Hardware::CPU.arm?
+      url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.4/tinyhiera-0.0.4-darwin-arm64.tar.gz"
+      sha256 "193bc186685f7992fc40449d9f0d3f5bde7824005a52eec0967b950f2e41f84e"
 
       def install
         bin.install "tinyhiera"
@@ -27,30 +27,30 @@ class Tinyhiera < Formula
   end
 
   on_linux do
-    on_intel do
+    if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.3/tinyhiera-0.0.3-linux-amd64.tar.gz"
-        sha256 "4a4c8b8bc0d468b77d86a5c95546d4fa8766c4de47157665d8e6a93cbd8ba82b"
+        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.4/tinyhiera-0.0.4-linux-amd64.tar.gz"
+        sha256 "a2ea097b5df42c180414be05610e7461f6a67dbaa3471d778817cfb8bf076f4e"
 
         def install
           bin.install "tinyhiera"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.3/tinyhiera-0.0.3-linux-arm6.tar.gz"
-        sha256 "f080ee35d9f675d92d1d1b5c9c0b7d36d789da238abf691eb059a78ff7b1bef8"
+        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.4/tinyhiera-0.0.4-linux-arm6.tar.gz"
+        sha256 "51c245d353e13886048485acfcef765429337ae245382f1edcf29bc2c5b4fad3"
 
         def install
           bin.install "tinyhiera"
         end
       end
     end
-    on_arm do
+    if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.3/tinyhiera-0.0.3-linux-arm64.tar.gz"
-        sha256 "3d207f7dbaa65103d19b56fa68cefa33fab8b79f7709c8c293590324b7afaa85"
+        url "https://github.com/choria-io/tinyhiera/releases/download/v0.0.4/tinyhiera-0.0.4-linux-arm64.tar.gz"
+        sha256 "e43b4816ab64d69ba19a51a612f113bba5a12731849d7237d3f54becfc25e4f1"
 
         def install
           bin.install "tinyhiera"
