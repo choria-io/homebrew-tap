@@ -5,20 +5,20 @@
 class Ccm < Formula
   desc "Choria Configuration Management"
   homepage "https://github.com/choria-io/ccm"
-  version "0.0.2"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/ccm/releases/download/v0.0.2/ccm-0.0.2-darwin-amd64.tar.gz"
-      sha256 "784c4dfd4c5746bbab3aae4a197567e0051f41e62400dae00d076c77a2c379d4"
+      url "https://github.com/choria-io/ccm/releases/download/v0.0.4/ccm-0.0.4-darwin-amd64.tar.gz"
+      sha256 "a458b02ece03baf2964032807e7a2fa9a82382fede046665a449d3aeda22f655"
 
       def install
         bin.install "ccm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choria-io/ccm/releases/download/v0.0.2/ccm-0.0.2-darwin-arm64.tar.gz"
-      sha256 "207a7b22a600be1fffbf8a92d16ebdf1877b6db2f9643a26755142414ac34fe0"
+      url "https://github.com/choria-io/ccm/releases/download/v0.0.4/ccm-0.0.4-darwin-arm64.tar.gz"
+      sha256 "0ed25a8951f239aa59562e5346e8c47bfb6e00f83a537f2b2b20f0a06c2d8620"
 
       def install
         bin.install "ccm"
@@ -28,22 +28,22 @@ class Ccm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/ccm/releases/download/v0.0.2/ccm-0.0.2-linux-amd64.tar.gz"
-      sha256 "0a19c1b0929bd24751d88292c8df92db12a0e01faaf11e75cd1c7696185c94e8"
+      url "https://github.com/choria-io/ccm/releases/download/v0.0.4/ccm-0.0.4-linux-amd64.tar.gz"
+      sha256 "d96e3c27b5055f097c4da462a898a3b7772de914085ea0272b159b48f27e3905"
       def install
         bin.install "ccm"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/ccm/releases/download/v0.0.2/ccm-0.0.2-linux-arm6.tar.gz"
-      sha256 "925a01f6f30cc7dfb7166d1ecb47d4fa8b94b509819833299149e8d28e9ce009"
+      url "https://github.com/choria-io/ccm/releases/download/v0.0.4/ccm-0.0.4-linux-arm6.tar.gz"
+      sha256 "1d6e0fc933c931c5cd685d7c3ad73165ee4136f04fe0e97c250c03fd72e66f9c"
       def install
         bin.install "ccm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/ccm/releases/download/v0.0.2/ccm-0.0.2-linux-arm64.tar.gz"
-      sha256 "908f9e20ae76ecb5e712ddb6da60bc3bce7d37b1d4e089e2b7d3b6fcf3ca073d"
+      url "https://github.com/choria-io/ccm/releases/download/v0.0.4/ccm-0.0.4-linux-arm64.tar.gz"
+      sha256 "7d4a5c149cb6bee7b13abfb7fd42c1ac5166b6186e758405648547e06b0aedba"
       def install
         bin.install "ccm"
       end
