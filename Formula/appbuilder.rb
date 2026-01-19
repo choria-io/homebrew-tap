@@ -5,12 +5,12 @@
 class Appbuilder < Formula
   desc "Choria Application Builder"
   homepage "https://github.com/choria-io/appbuilder"
-  version "0.12.0"
+  version "0.13.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.12.0/appbuilder-0.12.0-darwin-amd64.tar.gz"
-      sha256 "7b8e8ce4f6d436a9aa7481cd45d052ac8dae88658f1170b06960b9ea61a3a925"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.13.0/appbuilder-0.13.0-darwin-amd64.tar.gz"
+      sha256 "533987cc44665e26ca2d40e14c38192849dd44a1878493f63b6473d730bd1107"
 
       def install
         bin.install "appbuilder"
@@ -18,8 +18,8 @@ class Appbuilder < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.12.0/appbuilder-0.12.0-darwin-arm64.tar.gz"
-      sha256 "1c9d1e505da6f90bab37bd0d4b758b4b2d9dd9821fe16a19aa7a8af8a9aedf0f"
+      url "https://github.com/choria-io/appbuilder/releases/download/v0.13.0/appbuilder-0.13.0-darwin-arm64.tar.gz"
+      sha256 "4a1b071bc5078f8fbec2315c6a7c5f3f6c80d4b22615717eb47ff52922f2f65e"
 
       def install
         bin.install "appbuilder"
@@ -29,28 +29,37 @@ class Appbuilder < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.12.0/appbuilder-0.12.0-linux-amd64.tar.gz"
-      sha256 "126780ca11d1af26489896f0b31ee46b914cc4a0b4f64088b5af6c59797ee4e4"
-      def install
-        bin.install "appbuilder"
-        bin.install_symlink "appbuilder" => "abt"
+    if Hardware::CPU.intel?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/choria-io/appbuilder/releases/download/v0.13.0/appbuilder-0.13.0-linux-amd64.tar.gz"
+        sha256 "5342abc11a8c4287ce7714b322b14843b07f9056a7c5b18466ddab87c7dd5f39"
+
+        def install
+          bin.install "appbuilder"
+          bin.install_symlink "appbuilder" => "abt"
+        end
       end
     end
-    if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.12.0/appbuilder-0.12.0-linux-arm6.tar.gz"
-      sha256 "e440fa98aa3a52c5ecb90eb1b3feb55d9e3175fa62ca4b241c618eae008d5422"
-      def install
-        bin.install "appbuilder"
-        bin.install_symlink "appbuilder" => "abt"
+    if Hardware::CPU.arm?
+      if !Hardware::CPU.is_64_bit?
+        url "https://github.com/choria-io/appbuilder/releases/download/v0.13.0/appbuilder-0.13.0-linux-arm6.tar.gz"
+        sha256 "12f16470fea94a48fcfc89e1f503312e8dd87b2fead798dc134cd7c80df00f5f"
+
+        def install
+          bin.install "appbuilder"
+          bin.install_symlink "appbuilder" => "abt"
+        end
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/choria-io/appbuilder/releases/download/v0.12.0/appbuilder-0.12.0-linux-arm64.tar.gz"
-      sha256 "424bf289612aec6a3490d02bdbabcf9f5a5eb2f84dd48c871fe1a76579b9d35c"
-      def install
-        bin.install "appbuilder"
-        bin.install_symlink "appbuilder" => "abt"
+    if Hardware::CPU.arm?
+      if Hardware::CPU.is_64_bit?
+        url "https://github.com/choria-io/appbuilder/releases/download/v0.13.0/appbuilder-0.13.0-linux-arm64.tar.gz"
+        sha256 "e21ddef7d1cb2983e489f4437f618dbccb1da24bcf0e31ade03843f85339cca6"
+
+        def install
+          bin.install "appbuilder"
+          bin.install_symlink "appbuilder" => "abt"
+        end
       end
     end
   end
