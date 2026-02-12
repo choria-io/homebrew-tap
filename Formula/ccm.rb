@@ -3,7 +3,7 @@ cask "ccm" do
   name "ccm"
   desc "Choria Configuration Management"
   homepage "https://github.com/choria-io/ccm"
-  version "0.0.16"
+  version "0.0.17"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "ccm" do
   on_macos do
     on_intel do
       url "https://github.com/choria-io/ccm/releases/download/v#{version}/ccm-#{version}-darwin-amd64.tar.gz"
-      sha256 "632f899835e6b381ae6396513aab726d98be10a66f7ac0fc3b45e3464754bd27"
+      sha256 "32124f07520a5819aea1109df70b66c65dfb47688de9703e24f427a7b2017c3e"
     end
     on_arm do
       url "https://github.com/choria-io/ccm/releases/download/v#{version}/ccm-#{version}-darwin-arm64.tar.gz"
-      sha256 "898dfdd6086a2be75dde69a374b211c56ace3a3c3ec5f9b9e333209130168a9a"
+      sha256 "f57dde3b9aa902bac781c27f6b62422ece4b73ce16cd390fce67908d61e3b986"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/choria-io/ccm/releases/download/v#{version}/ccm-#{version}-linux-amd64.tar.gz"
-      sha256 "c100bb5ee124d2db97e2161cb16f484077595ae607b8ebe9dde405fd86ea95de"
+      sha256 "7426b1c3fd682057fed34989533dc81fda5af9bf6ec6b4191a8cceb501d4adfa"
     end
     on_arm do
       url "https://github.com/choria-io/ccm/releases/download/v#{version}/ccm-#{version}-linux-arm64.tar.gz"
-      sha256 "e236344316782cf552ae1a687ec987a62cb7e95c5b5557be545dd0775d24a29d"
+      sha256 "4ad27a84f9178db2d92711211335f2202f5b33fee97e0610cca33b669289629f"
     end
   end
 
