@@ -10,7 +10,7 @@ class Appbuilder < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.19.0/appbuilder-0.19.0-darwin-amd64.tar.gz"
-      sha256 "15294ce37073b997f8abdf6ff0a6352d90cfdb09a043c3f1aa2ba6e10020eb1a"
+      sha256 "6cf3ea5cf310cc64c7baab8f03722e17601cd70f3e1fc98bacbeddfb9b3492b4"
 
       define_method(:install) do
         bin.install "appbuilder"
@@ -19,7 +19,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.19.0/appbuilder-0.19.0-darwin-arm64.tar.gz"
-      sha256 "4964902fd283e5e3c74c6d8436947b5f105999d6116a759ebf83555820fb3dc0"
+      sha256 "af167ba506472215073e23240fe645bca808a32dfe388beded99f8a6bc009821"
 
       define_method(:install) do
         bin.install "appbuilder"
@@ -31,7 +31,7 @@ class Appbuilder < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.19.0/appbuilder-0.19.0-linux-amd64.tar.gz"
-      sha256 "1b94112d2f59ec86ff5685c26352399af95f27b9a1008ceea5d9baf0ad96cbe0"
+      sha256 "998c82dd2924f01e1f1ad6343ae8da4e15378fc9219bb99957b16b523a1ca558"
       define_method(:install) do
         bin.install "appbuilder"
         bin.install_symlink "appbuilder" => "abt"
@@ -39,7 +39,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.19.0/appbuilder-0.19.0-linux-arm6.tar.gz"
-      sha256 "66cb4abb9aa0fe819312b4685793bc1680db53bfa384dc0373cab3d8e00bb492"
+      sha256 "b1092354b137545bcf493aa4cd6560bba75bf01af0218c319c10f56ca7b8915d"
       define_method(:install) do
         bin.install "appbuilder"
         bin.install_symlink "appbuilder" => "abt"
@@ -47,7 +47,7 @@ class Appbuilder < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/choria-io/appbuilder/releases/download/v0.19.0/appbuilder-0.19.0-linux-arm64.tar.gz"
-      sha256 "2dfcd8a143a81fad08ef72afc3ec49416d1709a271fe723324fbb90561935a55"
+      sha256 "02320dc228cf16c2400c2112cc424e13949a071107914138f076cd955541d233"
       define_method(:install) do
         bin.install "appbuilder"
         bin.install_symlink "appbuilder" => "abt"
